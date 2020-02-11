@@ -109,5 +109,14 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="menu">More options</string>
     <string name="search">Search Group</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="hint_username">Full name</string>
+    <string name="hint_institution_name">Institution name</string>
+    <string name="info">Info</string>
+    <string name="hint_about">About</string>
+    <string name="hint_whatsapp">WhatsApp number</string>
+    <string name="hint_phone">Phone number</string>
+    <string name="hint_email">Student email</string>
+    <string name="add_course">Add Course</string>
 
 </resources>

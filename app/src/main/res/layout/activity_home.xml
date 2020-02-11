@@ -11,16 +11,18 @@
         android:id="@+id/tabLayout"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dimen_64_dp"
+        app:layout_constraintBottom_toTopOf="@id/viewPager"
         app:layout_constraintEnd_toStartOf="@id/searchBtn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tabBackground="?attr/selectableItemBackgroundBorderless"
         app:tabGravity="center"
-        app:tabIndicator="@null"
         app:tabMode="fixed"
-        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabIndicatorColor="@color/rich_black"
+        app:tabIndicatorHeight="@dimen/dimen_1_dp"
         app:tabRippleColor="@color/white"
+        app:tabTextAppearance="@style/TabTextAppearance"
         app:tabTextColor="@color/tab_text_color">
 
         <com.google.android.material.tabs.TabItem
@@ -38,9 +40,9 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
-        android:overScrollMode="never"
         android:layout_width="@dimen/dimen_0_dp"
         android:layout_height="@dimen/dimen_0_dp"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +52,6 @@
         android:id="@+id/searchBtn"
         android:layout_width="@dimen/dimen_54_dp"
         android:layout_height="@dimen/dimen_54_dp"
-        app:tooltipText="@string/search"
         android:layout_marginStart="@dimen/dimen_10_dp"
         android:layout_marginEnd="@dimen/dimen_10_dp"
         android:background="?selectableItemBackgroundBorderless"
@@ -58,18 +59,19 @@
         android:src="@mipmap/ic_search_black_24dp"
         app:layout_constraintBottom_toBottomOf="@id/fab_drawer"
         app:layout_constraintEnd_toStartOf="@id/fab_drawer"
-        app:layout_constraintTop_toTopOf="@id/fab_drawer" />
+        app:layout_constraintTop_toTopOf="@id/fab_drawer"
+        app:tooltipText="@string/search" />
 
     <ImageButton
         android:id="@+id/fab_drawer"
         android:layout_width="@dimen/dimen_54_dp"
-        android:tooltipText="@string/menu"
         android:layout_height="@dimen/dimen_54_dp"
         android:layout_marginStart="@dimen/dimen_10_dp"
         android:layout_marginEnd="@dimen/dimen_10_dp"
         android:background="?selectableItemBackgroundBorderless"
         android:contentDescription="@null"
         android:src="@mipmap/baseline_menu_black_24"
+        android:tooltipText="@string/menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
