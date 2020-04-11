@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:overScrollMode="never"
     android:fillViewport="true"
     android:fitsSystemWindows="true"
+    android:overScrollMode="never"
     android:scrollbars="none"
-    tools:context=".view.profile.ProfileUI">
+    tools:context=".view.profile.StudentProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_margin="@dimen/dimen_16_dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16_dp">
 
         <ImageView
             android:id="@+id/avatar"
@@ -33,60 +33,38 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16_dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="@dimen/dimen_16_dp"
-            android:layout_marginBottom="@dimen/dimen_8_dp"
             android:ellipsize="end"
             android:maxLines="2"
             android:text="@string/sample_username"
             android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/textColor"
-            app:layout_constraintBottom_toTopOf="@id/editBtn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@id/avatar"
             app:layout_constraintTop_toTopOf="@id/avatar" />
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/editBtn"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        <TextView
+            android:id="@+id/about"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="@dimen/dimen_16_dp"
-            android:text="@string/edit_profile"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/material_grey_500"
-            android:textStyle="bold"
-            app:backgroundTint="@null"
-            app:cornerRadius="@dimen/dimen_8_dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:paddingTop="@dimen/dimen_8_dp"
+            android:paddingBottom="@dimen/dimen_8_dp"
+            android:text="@string/lorem_ipsum_short"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/material_grey_700"
             app:layout_constraintBottom_toBottomOf="@id/avatar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@id/avatar"
             app:layout_constraintTop_toBottomOf="@id/user_name"
-            app:rippleColor="@color/material_grey_400"
-            app:strokeColor="@color/material_grey_300"
-            app:strokeWidth="@dimen/dimen_2_dp" />
-
-        <TextView
-            android:id="@+id/about"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_16_dp"
-            android:maxLines="3"
-            android:text="@string/lorem_ipsum_short"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/material_grey_700"
-            app:layout_constraintBottom_toTopOf="@id/h1_contact"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/avatar" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/h1_contact"
@@ -137,12 +115,12 @@
             android:layout_marginTop="@dimen/dimen_8_dp"
             android:clickable="true"
             android:focusable="true"
-            android:visibility="gone"
             android:gravity="center_vertical"
             android:text="@string/sample_phone"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textColor="@color/rich_black"
+            android:visibility="gone"
             app:backgroundTint="@null"
             app:cornerRadius="@dimen/dimen_0_dp"
             app:icon="@mipmap/baseline_call_black_24"

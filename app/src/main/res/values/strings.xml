@@ -118,5 +118,20 @@
     <string name="hint_phone">Phone number</string>
     <string name="hint_email">Student email</string>
     <string name="add_course">Add Course</string>
+    <string name="file_type_pdf">Pdf</string>
+    <string name="file_name_sample">Mam 311 Complex Analysis</string>
+    <string name="welcome">Hi, Sign Up Today!</string>
+    <string name="hint_fname">First Name</string>
+    <string name="hint_lname">Last Name</string>
+    <string name="hint_university">Select University</string>
+    <string name="next">Next</string>
+    <string name="welcome_back">Hi, Welcome Back!</string>
+    <string name="hint_password">Password</string>
+    <string name="login">Login</string>
+    <string name="welcome_step_2">Where do you study?</string>
+    <string name="done">Done</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="save">Save</string>
+    <string name="upload_activity">Upload</string>
 
 </resources>

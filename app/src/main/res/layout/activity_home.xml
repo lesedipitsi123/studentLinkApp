@@ -7,36 +7,78 @@
     android:background="@color/white"
     tools:context=".view.home.HomeActivity">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dimen_64_dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/menu_container"
+        android:layout_width="@dimen/dimen_0_dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_4_dp"
         app:layout_constraintBottom_toTopOf="@id/viewPager"
-        app:layout_constraintEnd_toStartOf="@id/searchBtn"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tabBackground="?attr/selectableItemBackgroundBorderless"
-        app:tabGravity="center"
-        app:tabMode="fixed"
-        app:tabIndicatorColor="@color/rich_black"
-        app:tabIndicatorHeight="@dimen/dimen_1_dp"
-        app:tabRippleColor="@color/white"
-        app:tabTextAppearance="@style/TabTextAppearance"
-        app:tabTextColor="@color/tab_text_color">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tab_group" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <com.google.android.material.tabs.TabItem
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_64_dp"
+                app:layout_constraintEnd_toStartOf="@id/searchBtn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabBackground="?attr/selectableItemBackgroundBorderless"
+                app:tabGravity="center"
+                app:tabIndicatorColor="@color/rich_black"
+                app:tabIndicatorHeight="@dimen/dimen_1_dp"
+                app:tabMode="fixed"
+                app:tabRippleColor="@color/white"
+                app:tabTextAppearance="@style/TabTextAppearance"
+                app:tabTextColor="@color/tab_text_color">
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tab_profile" />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_group" />
 
-    </com.google.android.material.tabs.TabLayout>
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_profile" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="@dimen/dimen_54_dp"
+                android:layout_height="@dimen/dimen_54_dp"
+                android:layout_marginStart="@dimen/dimen_10_dp"
+                android:layout_marginEnd="@dimen/dimen_10_dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_search_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/fab_drawer"
+                app:layout_constraintEnd_toStartOf="@id/fab_drawer"
+                app:layout_constraintTop_toTopOf="@id/fab_drawer"
+                app:tooltipText="@string/search" />
+
+            <ImageButton
+                android:id="@+id/fab_drawer"
+                android:layout_width="@dimen/dimen_54_dp"
+                android:layout_height="@dimen/dimen_54_dp"
+                android:layout_marginStart="@dimen/dimen_10_dp"
+                android:layout_marginEnd="@dimen/dimen_10_dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@null"
+                android:src="@mipmap/baseline_menu_black_24"
+                android:tooltipText="@string/menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -46,34 +88,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
-
-    <ImageButton
-        android:id="@+id/searchBtn"
-        android:layout_width="@dimen/dimen_54_dp"
-        android:layout_height="@dimen/dimen_54_dp"
-        android:layout_marginStart="@dimen/dimen_10_dp"
-        android:layout_marginEnd="@dimen/dimen_10_dp"
-        android:background="?selectableItemBackgroundBorderless"
-        android:contentDescription="@null"
-        android:src="@mipmap/ic_search_black_24dp"
-        app:layout_constraintBottom_toBottomOf="@id/fab_drawer"
-        app:layout_constraintEnd_toStartOf="@id/fab_drawer"
-        app:layout_constraintTop_toTopOf="@id/fab_drawer"
-        app:tooltipText="@string/search" />
-
-    <ImageButton
-        android:id="@+id/fab_drawer"
-        android:layout_width="@dimen/dimen_54_dp"
-        android:layout_height="@dimen/dimen_54_dp"
-        android:layout_marginStart="@dimen/dimen_10_dp"
-        android:layout_marginEnd="@dimen/dimen_10_dp"
-        android:background="?selectableItemBackgroundBorderless"
-        android:contentDescription="@null"
-        android:src="@mipmap/baseline_menu_black_24"
-        android:tooltipText="@string/menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/menu_container" />
 
     <!--  <com.google.android.material.floatingactionbutton.FloatingActionButton
           android:id="@+id/fab_drawer"

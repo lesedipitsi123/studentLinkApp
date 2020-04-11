@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+<ImageButton
         android:id="@+id/overflowBtn"
         android:layout_width="@dimen/dimen_54_dp"
         android:layout_height="@dimen/dimen_54_dp"
@@ -25,6 +25,16 @@
         android:contentDescription="@null"
         android:src="@mipmap/baseline_more_vert_black_24"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addFileBtn"
+        android:layout_width="@dimen/dimen_54_dp"
+        android:layout_height="@dimen/dimen_54_dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@null"
+        android:src="@mipmap/baseline_publish_black_24"
+        app:layout_constraintEnd_toStartOf="@id/overflowBtn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -42,7 +52,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textColor="@color/rich_black"
         app:layout_constraintBottom_toTopOf="@id/member_count"
-        app:layout_constraintEnd_toStartOf="@id/overflowBtn"
+        app:layout_constraintEnd_toStartOf="@id/addFileBtn"
         app:layout_constraintStart_toEndOf="@id/backBtn"
         app:layout_constraintTop_toTopOf="@id/backBtn" />
 

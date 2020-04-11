@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.profile.EditProfile"></activity>
+        <activity android:name=".view.groups.UploadFile"></activity>
+        <activity android:name=".view.profile.EditActivity" />
+        <activity android:name=".view.profile.StudentProfile" />
+        <activity android:name=".view.profile.EditProfile" />
         <activity android:name=".view.auth.SignUp" />
         <activity android:name=".view.search.SearchActivity" />
         <activity android:name=".view.groups.GroupActivity" />
