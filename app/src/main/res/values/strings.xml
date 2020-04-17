@@ -92,13 +92,13 @@
         tellus pellentesque sed nullam quis.
     </string>
     <string name="sample_about">About</string>
-    <string name="join_group">Join group</string>
+    <string name="join_group">Add Course</string>
     <string name="sample_group_count">7 groups</string>
     <string name="sample_contact">Contact</string>
     <string name="sample_whatsapp">072 666 2123</string>
     <string name="sample_email">sample@sample.com</string>
     <string name="sample_phone">011 434 5667</string>
-    <string name="sample_search">Search Group</string>
+    <string name="sample_search">Search Course</string>
     <string name="hint_search">Search course…</string>
     <string name="sample_group">Group name</string>
     <string name="tab_document">Documents</string>
