@@ -2,6 +2,7 @@ package apps.studios.bt.studentlink.view.profile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import apps.studios.bt.studentlink.R
 
 class StudentProfile : AppCompatActivity() {
 

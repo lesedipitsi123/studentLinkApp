@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_nav_graph"
+    app:startDestination="@layout/auth_sign_up_step1">
+
+    <!-- Sign Up navigation graph here-->
+
+    <fragment
+        android:id="@+id/step1"
+        android:name="apps.studios.bt.studentlink.view.auth.SignUpStep1"
+        android:label="SignUpStep1"
+        tools:layout="@layout/auth_sign_up_step1">
+        <action
+            app:enterAnim="@anim/slide_in_right"
+
+            android:id="@+id/step1_to_step2"
+            app:destination="@id/step2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/step2"
+        android:name="apps.studios.bt.studentlink.view.auth.SignUpStep2"
+        android:label="SignUpStep2"
+        tools:layout="@layout/auth_sign_up_step2">
+    </fragment>
+</navigation>

@@ -67,4 +67,4 @@
         tools:itemCount="7"
         tools:listitem="@layout/item_member" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
