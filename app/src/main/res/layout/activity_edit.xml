@@ -39,6 +39,8 @@
                     android:gravity="center_vertical"
                     android:imeOptions="actionNext"
                     android:inputType="textCapWords"
+                    android:drawableStart="@mipmap/round_person_black_24"
+                    android:drawablePadding="@dimen/dimen_16_dp"
                     android:lines="1"
                     android:padding="@dimen/dimen_16_dp"
                     android:text="@string/sample_username"

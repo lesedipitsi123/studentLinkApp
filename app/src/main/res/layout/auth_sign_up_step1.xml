@@ -39,15 +39,18 @@
             android:layout_marginTop="16dp"
             android:hint="@string/hint_fname"
             android:theme="@style/NormalEditTextStyle"
-            app:layout_constraintBottom_toTopOf="@id/lname"
+            app:layout_constraintBottom_toTopOf="@id/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_full_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
+                android:drawableStart="@mipmap/round_person_black_24"
+                android:drawablePadding="@dimen/dimen_16_dp"
                 android:gravity="center_vertical"
                 android:imeOptions="actionNext"
                 android:inputType="textCapWords"
@@ -55,31 +58,6 @@
                 android:padding="@dimen/dimen_16_dp"
                 android:textColor="@color/textColor"
                 android:textStyle="normal" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lname"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="@string/hint_lname"
-            android:theme="@style/NormalEditTextStyle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fname">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:gravity="center_vertical"
-                android:imeOptions="actionNext"
-                android:inputType="textCapWords"
-                android:lines="1"
-                android:padding="@dimen/dimen_16_dp"
-                android:textColor="@color/textColor" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,10 +71,11 @@
             android:theme="@style/NormalEditTextStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lname">
+            app:layout_constraintTop_toBottomOf="@id/fname">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
+                android:id="@+id/ed_student_email"
                 android:layout_height="wrap_content"
                 android:drawableStart="@mipmap/ic_email_black_24"
                 android:drawablePadding="@dimen/dimen_16_dp"
@@ -115,6 +94,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_marginTop="16dp"
             android:hint="@string/hint_whatsapp"
             android:theme="@style/NormalEditTextStyle"
@@ -139,7 +119,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/signUp"
+            android:id="@+id/nextScreen"
             android:layout_width="@dimen/dimen_128_dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dimen_16_dp"
@@ -149,7 +129,7 @@
             android:padding="@dimen/dimen_14_dp"
             android:stateListAnimator="@animator/lift_on_touch"
             android:text="@string/next"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
@@ -169,7 +149,7 @@
             android:clickable="true"
             android:focusable="true"
             android:text="Already have an account? Login"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textColor="@color/textColor"

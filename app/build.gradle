@@ -45,7 +45,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'info.androidhive:fontawesome:0.0.5'
-
+    implementation 'com.github.minibugdev:sheetselection:0.0.2'
     def nav_version = "2.3.0-alpha05"
 
     // Java language implementation

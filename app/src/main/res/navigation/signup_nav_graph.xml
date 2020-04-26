@@ -13,10 +13,12 @@
         android:label="SignUpStep1"
         tools:layout="@layout/auth_sign_up_step1">
         <action
-            app:enterAnim="@anim/slide_in_right"
-
             android:id="@+id/step1_to_step2"
-            app:destination="@id/step2" />
+            app:destination="@id/step2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -24,5 +26,13 @@
         android:name="apps.studios.bt.studentlink.view.auth.SignUpStep2"
         android:label="SignUpStep2"
         tools:layout="@layout/auth_sign_up_step2">
+        <action
+            android:name="user_university_name"
+            android:defaultValue="null"
+            app:argType="string" />
+        <action
+            android:name="user_full_name"
+            android:defaultValue="null"
+            app:argType="string" />
     </fragment>
 </navigation>

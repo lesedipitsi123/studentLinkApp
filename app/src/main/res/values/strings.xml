@@ -121,7 +121,7 @@
     <string name="file_type_pdf">Pdf</string>
     <string name="file_name_sample">Mam 311 Complex Analysis</string>
     <string name="welcome">Hi, Sign Up Today!</string>
-    <string name="hint_fname">First Name</string>
+    <string name="hint_fname">Full Name</string>
     <string name="hint_lname">Last Name</string>
     <string name="hint_university">Select University</string>
     <string name="next">Next</string>
@@ -133,5 +133,10 @@
     <string name="hint_full_name">Full name</string>
     <string name="save">Save</string>
     <string name="upload_activity">Upload</string>
+    <string name="error_student_email">Enter valid email</string>
+    <string name="error_form_invalid">Please check fields</string>
+    <string name="uni_ru">Rhodes University</string>
+    <string name="uni_up">University of Pretoria</string>
+    <string name="uni_uct">University of Cape Town</string>
 
 </resources>
